@@ -72,7 +72,7 @@ export default function Product({ product }) {
           <div className="p-4 flex flex-col items-center">
             <div className="w-40 h-40 mb-4">
               <img
-                src={product?.images[2]}
+                src={product?.images[0]}
                 alt={product?.name}
                 className="w-full h-full rounded-lg object-cover"
               />
@@ -107,7 +107,7 @@ export default function Product({ product }) {
                 </p>
               </>
             ) : (
-              <p className="text-xl font-black text-gray-900">
+              <p className="text-lg font-black text-gray-700">
                 ${product?.price}
               </p>
             )}
