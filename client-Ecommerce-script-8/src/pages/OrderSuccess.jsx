@@ -18,8 +18,6 @@ export default function OrderSuccess() {
   const subtotal = order.orders.reduce((sum, item) => sum + item.totalPrice, 0);
   const Total = subtotal > 1500 ? subtotal : subtotal + 100;
 
-  console.log(order);
-
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-12 font-montserrat">
       <div className="max-w-3xl w-full bg-white rounded-2xl shadow-lg p-8 md:p-12">
