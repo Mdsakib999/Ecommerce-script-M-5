@@ -7,10 +7,18 @@ import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useGetAllCategoriesQuery } from "../../redux/app/services/category/categoryApi";
+import { useGetAllProductQuery } from "../../redux/app/services/product/productApi";
 import Heading from "../shared/Heading";
 const Featured = () => {
   const { data: categories } = useGetAllCategoriesQuery();
+  const { data: products } = useGetAllProductQuery();
   const categoriesList = categories?.data || [];
+
+  const CountProductsBasedoNCategory = (categoryName) => {
+    return products?.data?.filter(
+      (product) => product.category === categoryName,
+    ).length;
+  };
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 relative">
@@ -80,7 +88,7 @@ const Featured = () => {
                         {category.name}
                       </h3>
                       <p className="text-gray-300 text-sm mb-4">
-                        {category?.count} Items
+                        {CountProductsBasedoNCategory(category.name)} Items
                       </p>
 
                       {/* Hover Reveal Button */}
