@@ -11,9 +11,13 @@ import { useGetAllProductQuery } from "../../redux/app/services/product/productA
 import Heading from "../shared/Heading";
 const Featured = () => {
   const { data: categories } = useGetAllCategoriesQuery();
-  const { data: products } = useGetAllProductQuery();
+  const params = {
+    limit: 1000,
+  };
+  const { data: products } = useGetAllProductQuery(params);
   const categoriesList = categories?.data || [];
 
+  console.log(products?.data);
   const CountProductsBasedoNCategory = (categoryName) => {
     return products?.data?.filter(
       (product) => product.category === categoryName,
