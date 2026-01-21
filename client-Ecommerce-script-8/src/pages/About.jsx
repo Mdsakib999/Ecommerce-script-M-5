@@ -41,7 +41,7 @@ export default function About() {
         <div className="w-full md:w-1/2 text-left flex flex-col justify-center gap-4">
           <h2 className="text-3xl font-semibold">Story About Us</h2>
           <p className="opacity-60">
-            At Shopverse, we are committed to making online shopping simple,
+            At ElectraBay Limited, we are committed to making online shopping simple,
             enjoyable, and trustworthy. Our mission is to deliver high-quality
             products directly to your doorstep while providing exceptional
             customer service. Every item is carefully selected for quality,

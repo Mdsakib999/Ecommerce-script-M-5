@@ -52,7 +52,7 @@ export default function Product({ product }) {
                   handleAddToCart(product);
               }}
               disabled={hasReachedStock}
-              className={`absolute right-4 bg-white flex items-center justify-center opacity-100 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer rounded-lg px-3 py-2 font-semibold border-1 border-gray-200 text-sm space-x-2 transition-all duration-300 ${
+              className={`absolute right-4 text-black bg-white flex items-center justify-center opacity-100 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer rounded-lg px-3 py-2 font-semibold border-1 border-gray-200 text-sm space-x-2 transition-all duration-300 ${
                 hasReachedStock
                   ? "bg-gray-400 text-white cursor-not-allowed"
                   : isInCart

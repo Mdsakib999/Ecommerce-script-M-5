@@ -27,7 +27,7 @@ export default function Loader() {
         {/* Loading text with gradient */}
         <div className="text-center space-y-3">
           <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Shopverse
+            ElectraBay Limited
           </h2>
           <p className="text-gray-600 text-sm font-medium flex items-center gap-2">
             <Sparkles className="w-4 h-4 text-yellow-500 animate-pulse" />
