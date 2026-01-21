@@ -7,10 +7,18 @@ import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useGetAllCategoriesQuery } from "../../redux/app/services/category/categoryApi";
+import { useGetAllProductQuery } from "../../redux/app/services/product/productApi";
 import Heading from "../shared/Heading";
 const Featured = () => {
   const { data: categories } = useGetAllCategoriesQuery();
+  const { data: products } = useGetAllProductQuery();
   const categoriesList = categories?.data || [];
+
+  const CountProductsBasedoNCategory = (categoryName) => {
+    return products?.data?.filter(
+      (product) => product.category === categoryName,
+    ).length;
+  };
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 relative">
@@ -57,30 +65,39 @@ const Featured = () => {
             <Link to={`/products?category=${category.name}`}>
               <div className="group flex flex-col items-center cursor-pointer">
                 {/* Category Card */}
-                <div className="w-full min-h-32 sm:min-h-60   bg-white rounded-lg border-2 border-gray-200  flex flex-row-reverse items-center justify-center transition-all duration-500 ease-in-out p-6">
-                  {/* Image */}
-                  <div className="h-32 min-h-24 transition-transform mb-4 duration-500 ease-in-out">
-                    <img
-                      className="h-full w-full object-cover"
-                      src={category.image}
-                      alt="category image"
-                    />
-                  </div>
-                  {/* Category Name */}
-                  <div className="w-full">
-                    <p className="p-1 w-20 text-sm text-center rounded-full text-white bg-[#3cb371]">
-                      18% off
-                    </p>
-                    <h3 className="font-bold text-secondary mt-3 text-sm sm:text-base">
-                      {category.name}
-                    </h3>
+                <div className="relative w-full h-60 sm:h-80 rounded-2xl overflow-hidden group shadow-lg">
+                  {/* Background Image */}
+                  <img
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    src={category.image}
+                    alt={category.name}
+                  />
 
-                    {/* Item Count */}
-                    <p className="text-gray-600 text-xs sm:text-sm transition-colors duration-300">
-                      {category.count} Items
-                    </p>
-                    <div className="border-1 py-4 px-4 mt-8 rounded-full w-13 group-hover:border-primary group-hover:bg-secondary-light border-gray-300">
-                      <ArrowRight size="18" color="blue" />
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-300 group-hover:from-black/90" />
+
+                  {/* Content */}
+                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                    {/* Discount Badge */}
+                    <div className="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                      18% OFF
+                    </div>
+
+                    <div className="transform transition-transform duration-300 translate-y-2 group-hover:translate-y-0">
+                      <h3 className="text-xl font-bold text-white mb-1">
+                        {category.name}
+                      </h3>
+                      <p className="text-gray-300 text-sm mb-4">
+                        {CountProductsBasedoNCategory(category.name)} Items
+                      </p>
+
+                      {/* Hover Reveal Button */}
+                      <div className="flex items-center gap-2 text-white font-medium opacity-0 transform translate-y-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                        <span>Shop Now</span>
+                        <div className="bg-white/20 p-2 rounded-full backdrop-blur-sm group-hover:bg-primary group-hover:text-white transition-colors">
+                          <ArrowRight size={16} />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

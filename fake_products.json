@@ -1,0 +1,273 @@
+[
+  {
+    "name": "Wireless Noise Cancelling Headphones",
+    "brand": "SoundMax",
+    "category": "Electronics",
+    "price": 2999,
+    "discountPrice": 2499,
+    "quantity": 50,
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "inStock": true,
+    "description": "Premium wireless headphones with active noise cancellation and 30-hour battery life.",
+    "specifications": "Bluetooth 5.0, ANC, USB-C Charging"
+  },
+  {
+    "name": "Smart Fitness Watch Series 5",
+    "brand": "TechFit",
+    "category": "Electronics",
+    "price": 4500,
+    "discountPrice": 3999,
+    "quantity": 30,
+    "images": [
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "inStock": true,
+    "description": "Advanced fitness tracker with heart rate monitoring, GPS, and water resistance.",
+    "specifications": "OLED Display, 5ATM Water Resistant, 7-day Battery"
+  },
+  {
+    "name": "Professional DSLR Camera Kit",
+    "brand": "Cannon",
+    "category": "Electronics",
+    "price": 45000,
+    "quantity": 10,
+    "images": [
+      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "inStock": true,
+    "description": "24MP DSLR camera with 18-55mm lens kit, perfect for beginners and enthusiasts.",
+    "specifications": "24MP Sensor, 1080p Video, Wi-Fi"
+  },
+  {
+    "name": "Ultra-Slim 4K Smart TV 55 inch",
+    "brand": "VisionPlus",
+    "category": "Electronics",
+    "price": 38000,
+    "discountPrice": 35000,
+    "quantity": 15,
+    "images": [
+      "https://images.unsplash.com/photo-1593784997263-b8519453995f?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "inStock": true,
+    "description": "Stunning 4K streaming and gaming with vibrant colors and smart home integration.",
+    "specifications": "4K UHD, HDR10, Android TV"
+  },
+  {
+    "name": "Men's Classic Leather Jacket",
+    "brand": "UrbanWear",
+    "category": "Fashion",
+    "price": 5500,
+    "quantity": 25,
+    "images": [
+      "https://images.unsplash.com/photo-1551028919-ac7bcb7d7153?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "inStock": true,
+    "description": "Genuine leather jacket with a modern fit and durable zippers.",
+    "specifications": "100% Leather, Zip Closure, Inner Pocket"
+  },
+  {
+    "name": "Women's Summer Floral Dress",
+    "brand": "ChicStyle",
+    "category": "Fashion",
+    "price": 2200,
+    "discountPrice": 1800,
+    "quantity": 40,
+    "images": [
+      "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "inStock": true,
+    "description": "Lightweight and breathable floral dress perfect for summer outings.",
+    "specifications": "Cotton Blend, Knee Length, Short Sleeve"
+  },
+  {
+    "name": "Unisex Running Sneakers",
+    "brand": "RunFast",
+    "category": "Sports",
+    "price": 3200,
+    "quantity": 60,
+    "images": [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "inStock": true,
+    "description": "High-performance running shoes with cushioned soles for maximum comfort.",
+    "specifications": "Breathable Mesh, EVA Sole, Lightweight"
+  },
+  {
+    "name": "Yoga Mat with Carrying Strap",
+    "brand": "ZenLife",
+    "category": "Sports",
+    "price": 1200,
+    "discountPrice": 999,
+    "quantity": 100,
+    "images": [
+      "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "inStock": true,
+    "description": "Eco-friendly non-slip yoga mat suitable for all types of exercises.",
+    "specifications": "6mm Thickness, TPE Material, Anti-Slip"
+  },
+  {
+    "name": "Modern Coffee Table",
+    "brand": "HomeDeco",
+    "category": "Home",
+    "price": 8500,
+    "discountPrice": 7500,
+    "quantity": 10,
+    "images": [
+      "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "inStock": true,
+    "description": "Minimalist wooden coffee table with a glass top and storage shelf.",
+    "specifications": "Solid Wood, Tempered Glass, 100x60cm"
+  },
+  {
+    "name": "Ceramic Plant Pot Set",
+    "brand": "GreenThumb",
+    "category": "Home",
+    "price": 1500,
+    "quantity": 45,
+    "images": [
+      "https://images.unsplash.com/photo-1485955900006-10f63b453e38?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "inStock": true,
+    "description": "Set of 3 ceramic plant pots with drainage holes and saucers.",
+    "specifications": "Ceramic, Set of 3 (Small, Medium, Large)"
+  },
+  {
+    "name": "Organic Face Serum",
+    "brand": "PureBeauty",
+    "category": "Beauty",
+    "price": 1800,
+    "discountPrice": 1500,
+    "quantity": 80,
+    "images": [
+      "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "inStock": true,
+    "description": "Vitamin C enriched serum for glowing and youthful skin.",
+    "specifications": "30ml, Organic Ingredients, Cruelty-Free"
+  },
+  {
+    "name": "Matte Lipstick Set",
+    "brand": "Glamour",
+    "category": "Beauty",
+    "price": 1200,
+    "quantity": 60,
+    "images": [
+      "https://images.unsplash.com/photo-1586495777744-4413f21062fa?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "inStock": true,
+    "description": "Long-lasting matte lipstick set in 5 vibrant shades.",
+    "specifications": "5 Colors, Hydrating Formula, 12h Wear"
+  },
+  {
+    "name": "Bluetooth Portable Speaker",
+    "brand": "SonicBoom",
+    "category": "Electronics",
+    "price": 3500,
+    "discountPrice": 2999,
+    "quantity": 40,
+    "images": [
+      "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "inStock": true,
+    "description": "Waterproof portable speaker with deep bass and 12-hour playtime.",
+    "specifications": "IPX7 Waterproof, 360 Sound, Bluetooth 5.0"
+  },
+  {
+    "name": "Designer Sunglasses",
+    "brand": "SunShade",
+    "category": "Fashion",
+    "price": 2500,
+    "quantity": 35,
+    "images": [
+      "https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "inStock": true,
+    "description": "Stylish sunglasses with UV protection and durable frames.",
+    "specifications": "UV400 Protection, Polarized Lenses"
+  },
+  {
+    "name": "Stainless Steel Water Bottle",
+    "brand": "EcoFlask",
+    "category": "Sports",
+    "price": 800,
+    "discountPrice": 650,
+    "quantity": 100,
+    "images": [
+      "https://images.unsplash.com/photo-1602143407151-011141957516?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "inStock": true,
+    "description": "Double-walled insulated water bottle keeps drinks cold for 24 hours.",
+    "specifications": "500ml, Stainless Steel, Leak-Proof"
+  },
+  {
+    "name": "Luxury Bed Sheets Set",
+    "brand": "SleepWell",
+    "category": "Home",
+    "price": 4200,
+    "quantity": 20,
+    "images": [
+      "https://images.unsplash.com/photo-1522771753035-1a5b6562f3ba?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "inStock": true,
+    "description": "Soft and durable cotton sheet set for a comfortable night's sleep.",
+    "specifications": "400 Thread Count, 100% Cotton, Queen Size"
+  },
+  {
+    "name": "Ergonomic Office Chair",
+    "brand": "WorkEase",
+    "category": "Home",
+    "price": 12000,
+    "discountPrice": 10500,
+    "quantity": 10,
+    "images": [
+      "https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "inStock": true,
+    "description": "Adjustable office chair with lumbar support and breathable mesh back.",
+    "specifications": "Height Adjustable, Reclining, 360 Swivel"
+  },
+  {
+    "name": "Gaming Keyboard Mechanical",
+    "brand": "GamePro",
+    "category": "Electronics",
+    "price": 5500,
+    "quantity": 25,
+    "images": [
+      "https://images.unsplash.com/photo-1587829741301-3143c7b808e6?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "inStock": true,
+    "description": "RGB mechanical keyboard with blue switches for tactile gaming feedback.",
+    "specifications": "RGB Backlight, Mechanical Switches, Anti-Ghosting"
+  },
+  {
+    "name": "Men's Casual Canvas Shoes",
+    "brand": "StreetWalk",
+    "category": "Fashion",
+    "price": 1800,
+    "quantity": 50,
+    "images": [
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "inStock": true,
+    "description": "Classic canvas sneakers for everyday wear comfort and style.",
+    "specifications": "Canvas Upper, Rubber Sole, Lace-Up"
+  },
+  {
+    "name": "Hair Dryer Professional",
+    "brand": "SalonStyler",
+    "category": "Beauty",
+    "price": 2800,
+    "discountPrice": 2400,
+    "quantity": 30,
+    "images": [
+      "https://images.unsplash.com/photo-1522338242992-e1a54906a8ae?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "inStock": true,
+    "description": "High-power hair dryer with multiple heat settings and cool shot.",
+    "specifications": "2200W, Ionic Technology, 2 Nozzles"
+  }
+]
