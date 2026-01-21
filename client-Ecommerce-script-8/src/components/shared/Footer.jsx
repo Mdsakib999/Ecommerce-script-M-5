@@ -12,12 +12,12 @@ export default function Footer() {
           {/* Logo & Description */}
           <div className="space-y-4 pt-1 col-span-1 md:col-span-2 px-1">
             <Link to="/" className="mb-2">
-              <img className="w-48" src={logo} alt="Shopverse logo" />
+              <img className="w-48" src={logo} alt="ElectraBay logo" />
             </Link>
 
             <p className="text-sm mt-4">
               <span className="text-lg font-semibold">
-                Shopverse Industries Ltd.
+                ElectraBay Limited
               </span>
               <br />
               <span className="opacity-60">
@@ -146,7 +146,7 @@ export default function Footer() {
         <div className="pt-10">
           <hr className="border-gray-700" />
           <p className="text-center text-sm opacity-60 pt-4">
-            Shopverse © 2025 Demo Store. All Rights Reserved.
+            ElectraBay Limited © 2025 Demo Store. All Rights Reserved.
           </p>
         </div>
       </footer>

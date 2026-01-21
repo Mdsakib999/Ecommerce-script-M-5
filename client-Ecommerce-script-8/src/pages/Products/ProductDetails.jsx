@@ -38,7 +38,7 @@ export default function ProductDetails() {
 
   // Use first image as default
   const images = product?.images || [];
-  const displayImage = mainImage || images[2];
+  const displayImage = mainImage || images[0];
   // Helper function to parse specifications
   const parseSpecifications = (specString) => {
     if (!specString) return [];

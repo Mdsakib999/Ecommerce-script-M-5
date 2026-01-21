@@ -146,7 +146,7 @@ export default function CartSlider({ isOpen, toggleCart }) {
                   {/* Product Image */}
                   <div className="relative flex-shrink-0">
                     <img
-                      src={item.images[2]}
+                      src={item.images[0]}
                       alt={item.name}
                       className="w-24 h-full object-cover rounded-lg"
                     />

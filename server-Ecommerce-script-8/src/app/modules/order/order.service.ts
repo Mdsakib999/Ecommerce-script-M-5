@@ -39,7 +39,7 @@ const createOrder = async (data: IOrder) => {
     path: "orders.product",
     select: "name images discountPrice price",
   });
-  console.log(populatedOrder);
+  // console.log(populatedOrder);
 
   return populatedOrder;
 };

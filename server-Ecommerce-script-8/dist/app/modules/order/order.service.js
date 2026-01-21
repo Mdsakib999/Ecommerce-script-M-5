@@ -44,7 +44,7 @@ const createOrder = (data) => __awaiter(void 0, void 0, void 0, function* () {
         path: "orders.product",
         select: "name images discountPrice price",
     });
-    console.log(populatedOrder);
+    // console.log(populatedOrder);
     return populatedOrder;
 });
 const getAllOrders = (query) => __awaiter(void 0, void 0, void 0, function* () {

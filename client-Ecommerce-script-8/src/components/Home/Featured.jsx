@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { useMemo } from "react";
 import { Link } from "react-router";
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -11,14 +12,32 @@ import { useGetAllProductQuery } from "../../redux/app/services/product/productA
 import Heading from "../shared/Heading";
 const Featured = () => {
   const { data: categories } = useGetAllCategoriesQuery();
-  const { data: products } = useGetAllProductQuery();
-  const categoriesList = categories?.data || [];
-
-  const CountProductsBasedoNCategory = (categoryName) => {
-    return products?.data?.filter(
-      (product) => product.category === categoryName,
-    ).length;
+  const params = {
+    limit: 1000,
   };
+  const { data: products } = useGetAllProductQuery(params);
+  const categoriesList = categories?.data || [];
+  const productsList = products?.data || [];
+  const countsMap = useMemo(() => {
+    const map = new Map();
+    productsList.forEach((product) => {
+      const key = product.category;
+      if (!key) return;
+      map.set(key, (map.get(key) || 0) + 1);
+    });
+    // console.log(map);
+    return map;
+  }, [productsList]);
+
+  const getCountForCategory = (categoryName) => {
+    // console.log(countsMap.get(categoryName))
+    return countsMap.get(categoryName) || 0;
+  }
+  // const CountProductsBasedoNCategory = (categoryName) => {
+  //   return products?.data?.filter(
+  //     (product) => product.category === categoryName,
+  //   ).length;
+  // };
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16 relative">
@@ -88,7 +107,7 @@ const Featured = () => {
                         {category.name}
                       </h3>
                       <p className="text-gray-300 text-sm mb-4">
-                        {CountProductsBasedoNCategory(category.name)} Items
+                        {getCountForCategory(category.name)} Items
                       </p>
 
                       {/* Hover Reveal Button */}

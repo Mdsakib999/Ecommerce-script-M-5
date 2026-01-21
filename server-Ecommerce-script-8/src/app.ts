@@ -1,13 +1,13 @@
-import express from "express";
+import cookieParser from "cookie-parser";
 import cors from "cors";
+import express from "express";
 import expressSession from "express-session";
+import passport from "passport";
+import { envVariables } from "./app/config/envConfig";
+import "./app/config/passport";
 import { globalErrorHandler } from "./app/middlewares/globalErrorHandler";
 import notFound from "./app/middlewares/notFound";
 import { router } from "./app/routes/router";
-import passport from "passport";
-import "./app/config/passport";
-import cookieParser from "cookie-parser";
-import { envVariables } from "./app/config/envConfig";
 
 const app = express();
 
@@ -38,7 +38,7 @@ app.use("/api/v1", router);
 
 app.get("/", (req, res) => {
   res.status(200).json({
-    message: "Welcome to Shopverse backend",
+    message: "Welcome to ElectraBay Limited backend",
   });
 });
 
