@@ -60,12 +60,15 @@ export default function Checkout() {
   const dispatch = useDispatch();
 
   const onSubmit = async (data) => {
-    const orders = orderItems.map((item) => ({
-      product: item._id,
-      quantity: item.cartQuantity,
-      price: item.discountPrice,
-      totalPrice: item.discountPrice * item.cartQuantity,
-    }));
+    const orders = orderItems.map((item) => {
+      const price = item.discountPrice ?? item.price;
+      return {
+        product: item._id,
+        quantity: item.cartQuantity,
+        price,
+        totalPrice: price * item.cartQuantity,
+      };
+    });
 
     const total = orders.reduce((sum, item) => sum + item.totalPrice, 0);
 

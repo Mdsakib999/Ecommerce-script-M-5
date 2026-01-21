@@ -1,27 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Request, Response } from "express";
-import Category from "./category.model";
+import { categoryService } from "./category.service";
 
 const createCategory = async (req: Request, res: Response) => {
   try {
-    const { name } = req.body;
-
-    const existing = await Category.findOne({
-      name: { $regex: `^${name}$`, $options: "i" },
-    }).lean();
-
-    if (existing) {
-      return res.status(400).json({
-        success: false,
-        message: "Category with this name already exists.",
-      });
-    }
-
-    const newCategory = await Category.create(req.body);
-
+    const result = await categoryService.createCategory(req);
     res.status(201).json({
       success: true,
-      data: newCategory,
+      data: result,
     });
   } catch (error: any) {
     res.status(400).json({
@@ -33,7 +19,7 @@ const createCategory = async (req: Request, res: Response) => {
 
 const getAllCategories = async (req: Request, res: Response) => {
   try {
-    const allCategories = await Category.find().lean().sort("-createdAt");
+    const allCategories = await categoryService.getAllCategories();
     res.status(200).json({
       success: true,
       data: allCategories,
@@ -45,16 +31,7 @@ const getAllCategories = async (req: Request, res: Response) => {
 
 const updateCategory = async (req: Request, res: Response) => {
   try {
-    const updatedCategory = await Category.findOneAndUpdate(
-      { _id: req.params.id },
-      req.body,
-      { new: true, runValidators: true }
-    );
-
-    if (!updatedCategory) {
-      return res.status(404).json({ error: "Product not found" });
-    }
-
+    const updatedCategory = await categoryService.updateCategory(req);
     res.status(200).json({
       success: true,
       data: updatedCategory,
@@ -66,14 +43,7 @@ const updateCategory = async (req: Request, res: Response) => {
 
 const deleteCategory = async (req: Request, res: Response) => {
   try {
-    const deleteCategory = await Category.findOneAndDelete({
-      _id: req.params.id,
-    });
-
-    if (!deleteCategory) {
-      return res.status(404).json({ error: "Product not found" });
-    }
-
+    await categoryService.deleteCategory(req.params.id);
     res.status(200).json({
       success: true,
       data: null,
