@@ -23,6 +23,7 @@ import {
 import SearchBar from "../SearchBar";
 import CartSlider from "./CartSlider";
 import Logo from "./Logo";
+import SubHeader from "./SubHeader";
 
 export default function Navbar() {
   const { data: userInfo } = useUserInfoQuery();
@@ -84,7 +85,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="bg-secondary shadow-sm sticky top-0 z-50">
-        {/* <SubHeader /> */}
+        <SubHeader />
 
         {/* Main navbar */}
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
